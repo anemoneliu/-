@@ -1,8 +1,11 @@
 # 关于现有数据集全面核查情况的记录
 
 SubDataset部分：检查part有没有分对
+
 cellAnnotation部分：cellAnnotation-为需要删去的字段；cellAnnotation+为需要添加的字段
+
 UnstructureData部分：uns['metadata']中需要修改或者添加的字段
+
 Notes：其他错误及修改中需要注意的地方
 
 ## 2.4.2020更新
