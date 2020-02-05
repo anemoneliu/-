@@ -2,7 +2,7 @@
 
 SubDataset部分：检查part有没有分对
 
-cellAnnotation部分：cellAnnotation-为需要删去的字段；cellAnnotation+为需要添加的字段
+cellAnnotation部分：cellAnnotation-为需要删去的字段；cellAnnotation+为需要添加的字段（格式不整齐表示由于例如字母大小写的问题造成标签冗余，此时应该调检查拼写，整理格式）
 
 UnstructureData部分：uns['metadata']中需要修改或者添加的字段
 
