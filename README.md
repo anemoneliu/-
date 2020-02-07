@@ -25,14 +25,14 @@ Notes：其他错误及修改中需要注意的地方
 
 ## 2.6.2020更新
 
-| Dataset | SubDataset                    | CellAnnotation-                                             | CellAnnotation+                                              | UnstructureData                 | Notes                       | 修改状态 | 人员分配 |
-| ------- | ----------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------- | --------------------------- | -------- | -------- |
-| No_316  |                               | Assigned_Subgroup; Scpm Coef                                |                                                              | 缺少摘要图                      |                             | 未修改   |          |
-| No_312  |                               | sourceName；gender                                          |                                                              | 缺少摘要图；tissue填brain       |                             | 未修改   |          |
-| No_299  |                               | description                                                 | cellOntology填CD8 T细胞的信息，condition_plate，seq_id，batch_bio | 缺少摘要图                      | 细胞数少于文章，重做        | 未修改   |          |
-| No_282  |                               | 格式不整齐                                                  |                                                              | 缺少摘要图                      | 混杂了非单细胞数据，重做    | 未修改   |          |
-| No_264  |                               | cellID, embryo, description                                 |                                                              | 摘要图不清晰                    | 没有用提供的TPM，重做       | 未修改   |          |
-| No_195  | 需要分part，H1和H1 fucci      | passage, treatmen                                           |                                                              | 缺少摘要图                      |                             | 未修改   |          |
-| No_98   |                               | description, donor, age, sex; 没有fibrocyte这种cellOntology |                                                              | 摘要图不清晰； Tissue不能填knee | 没有用提供的normalize，重做 | 未修改   |          |
-| No_61   | 缺少一个数据集GSE107727的数据 | sorting strategy，strain                                    |                                                              | 缺少摘要图                      |                             | 未修改   |          |
+| Dataset | SubDataset                    | CellAnnotation-                                             | CellAnnotation+                                              | UnstructureData                 | Notes                       | 修改状态 | 人员分配      |
+| ------- | ----------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------- | --------------------------- | -------- | ------------- |
+| No_316  |                               | Assigned_Subgroup; Scpm Coef                                |                                                              | 缺少摘要图                      |                             | 未修改   |               |
+| No_312  |                               | sourceName；gender                                          |                                                              | 缺少摘要图；tissue填brain       |                             | 未修改   |               |
+| No_299  |                               | description                                                 | cellOntology填CD8 T细胞的信息，condition_plate，seq_id，batch_bio | 缺少摘要图                      | 细胞数少于文章，重做        | 修改中   | 2.7.2020 陈淳 |
+| No_282  |                               | 格式不整齐                                                  |                                                              | 缺少摘要图                      | 混杂了非单细胞数据，重做    | 未修改   |               |
+| No_264  |                               | cellID, embryo, description                                 |                                                              | 摘要图不清晰                    | 没有用提供的TPM，重做       | 未修改   |               |
+| No_195  | 需要分part，H1和H1 fucci      | passage, treatmen                                           |                                                              | 缺少摘要图                      |                             | 未修改   |               |
+| No_98   |                               | description, donor, age, sex; 没有fibrocyte这种cellOntology |                                                              | 摘要图不清晰； Tissue不能填knee | 没有用提供的normalize，重做 | 未修改   |               |
+| No_61   | 缺少一个数据集GSE107727的数据 | sorting strategy，strain                                    |                                                              | 缺少摘要图                      |                             | 未修改   |               |
 
