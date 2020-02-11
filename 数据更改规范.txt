@@ -43,7 +43,7 @@ my_downsample.downsample(tpm_downsampled = True)
 
 2.2 clusterName没变，其他部分变动
 
-my_downsample.downsample()
+my_downsample.downsample(tpm_downsampled = True)
 
 三、	metadata
 
