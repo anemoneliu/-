@@ -1,0 +1,58 @@
+#运行配置项
+import importlib.util
+import sys
+import os 
+import pandas as pd
+import numpy as np
+from scipy.io import mmread, mmwrite
+import scanpy as sc
+import anndata as an
+import louvain
+sys.path.append('/home/biodb/data/abio_database_pipeline/') #注意如果是在阿里云服务器上，该地址改为：'/home/biodb/ztr/abio_database_pipeline/'
+from pipeline.datasets_curation import datasetBuilder
+from pipeline.datasets_curation import inspector
+from pipeline.datasets_curation import downsample
+
+starting_dir = '/home/biodb/data/dataset_collection/datasets/3_standard_dataset/No_1/part_1’
+my_inspector = inspector.Inspector(starting_dir)
+my_builder = datasetBuilder.DatasetBuilder(starting_dir)
+my_downsample = downsample.Downsample(starting_dir)
+
+以下三个部分的数据如果进行了修改，需要注意运行下面的自动化函数：
+
+一、	矩阵
+
+矩阵变动情形需将该文件夹cp –r 到个人目录下进行更改，不允许直接在standard_dataset里面进行更改
+
+1.1	raw counts, normalized变动，需要考虑重新生成TPM矩阵；
+
+1.2	TPM矩阵变化，所有自动生成函数需重新运行，包括：
+
+my_builder.generate_geneAnno()
+my_builder.calculate_dim_red(tSNE = True, UMAP = True)
+#以下两个函数最后运行
+my_builder.auto_calculation()
+my_downsample.downsample()
+
+二、	cellAnnotation（以下情形为矩阵未改动的情形，如矩阵变动参考1.1）
+
+2.1 clusterName改动，需要重新运行：
+
+my_builder.auto_calculation()
+my_downsample.downsample(tpm_downsampled = True)
+
+2.2 clusterName没变，其他部分变动
+
+my_downsample.downsample()
+
+三、	metadata
+
+直接更改unstructuredData.json文件即可
+
+四、	其他注意事项
+
+4.1 每改完一个问题需要进行汇报，同时需要有文档记录更改的内容；
+4.2 更改数据的代码需新建一个代码脚本进行更改，不要直接在别人的代码上改。
+4.3 不清楚的函数或者代码内容可以参考代码目录里面的脚本
+4.4 更改完成的数据集需要放在路径：/home/biodb/data/dataset_collection/datasets/2_inspection_stage/revised
+4.5 更改完成之后需通过检查器检查之后再进行报备
