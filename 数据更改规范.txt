@@ -13,7 +13,7 @@ from pipeline.datasets_curation import datasetBuilder
 from pipeline.datasets_curation import inspector
 from pipeline.datasets_curation import downsample
 
-starting_dir = '/home/biodb/data/dataset_collection/datasets/3_standard_dataset/No_1/part_1’
+starting_dir = '/home/biodb/data/dataset_collection/datasets/3_standard_dataset/No_1/part_1' #根据自己更改的数据集更换路径
 my_inspector = inspector.Inspector(starting_dir)
 my_builder = datasetBuilder.DatasetBuilder(starting_dir)
 my_downsample = downsample.Downsample(starting_dir)
