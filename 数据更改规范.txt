@@ -8,7 +8,7 @@ from scipy.io import mmread, mmwrite
 import scanpy as sc
 import anndata as an
 import louvain
-sys.path.append('/home/biodb/data/abio_database_pipeline/') #注意如果是在阿里云服务器上，该地址改为：'/home/biodb/ztr/abio_database_pipeline/'
+sys.path.append('/home/biodb/data/abio_database_pipeline/') #注意如果是在阿里云服务器上，该地址改为：'/home/ztr/abio_database_pipeline/'
 from pipeline.datasets_curation import datasetBuilder
 from pipeline.datasets_curation import inspector
 from pipeline.datasets_curation import downsample
