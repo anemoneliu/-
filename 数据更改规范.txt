@@ -18,6 +18,14 @@ my_inspector = inspector.Inspector(starting_dir)
 my_builder = datasetBuilder.DatasetBuilder(starting_dir)
 my_downsample = downsample.Downsample(starting_dir)
 
+expressionMatrix_rawCounts = 'expressionMatrix_rawCounts.tsv'
+expressionMatrix_normalized = 'expressionMatrix_normalized.tsv'
+expressionMatrix_TPM = 'expressionMatrix_TPM.tsv'
+cellAnnotation = 'cellAnnotation.tsv'
+geneAnnotation = 'geneAnnotation.tsv'
+unstructuredData = 'unstructuredData.json'
+readme = 'README.json'
+
 以下三个部分的数据如果进行了修改，需要注意运行下面的自动化函数：
 
 一、	矩阵
