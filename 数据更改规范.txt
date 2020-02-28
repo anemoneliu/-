@@ -45,6 +45,11 @@ my_downsample.downsample(tpm_downsampled = True)
 
 my_downsample.downsample(tpm_downsampled = True)
 
+2.3 其他
+
+cluster如果是用函数生成的话会多出两列：clusteringMethod和clusterName_scibet。
+所以如果是后面找到原文提供的cluster信息填入之后，需要将原来这两列删除。
+
 三、	metadata
 
 直接更改unstructuredData.json文件即可
