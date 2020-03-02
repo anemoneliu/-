@@ -30,6 +30,7 @@ my_downsample = downsample.Downsample(starting_dir)
 
 my_builder.generate_geneAnno()
 my_builder.calculate_dim_red(tSNE = True, UMAP = True)
+my_builder.calculate_cluster()
 #以下两个函数最后运行
 my_builder.auto_calculation()
 my_downsample.downsample()
