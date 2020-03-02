@@ -1,0 +1,29 @@
+为了描述方便，我们将审查得到的错误严重程度分为以下三类：
+1. 矩阵需要改动；
+2. cell annotation需要改动；
+3. 只有文章metadata需要改动。
+
+除错误1可由审查人员直接在原文件中自行改动之外，其余错误均需按照以下步骤！
+
+一、派发步骤：
+1. 选择空闲的修改人员派发在redmine上修改任务；
+2. 将错误数据集scp 到修改人的目录中
+3. 本地记录到检查表格中。
+
+二、修改回收步骤：
+1. 当修改人在redmine上反馈修改完成之后，审查人去该目录下进行二次检查。
+    除了原有问题之外，需重点看以下几点：
+    1.1 如果是错误1，需检查其相应的自动生成函数是否都运行了（可根据文件更新时间进行判断），
+          包括：tsne, cluster, auto_calculation, downsample等；
+    1.2 metadata里面的research topic，clusterAvailability以及tSNEAvailability需进行二次核查；
+
+2. 确认没有错误之后，将README中的quality改为Passed
+
+3. 将数据集打包压缩(如果数据集较小可不打包压缩，但还是建议先打包压缩)，并拷贝回来，
+    拷贝到路径：/home/biodb/data/dataset_collection/datasets/2_inspection_stage/revised/，
+    也就是说除了错误3，错误1和错误2的数据改完之后均需要放在以上这个路径中。
+
+4. 修改redmine上的bug状态为closed，在本地表格中记录修改状态为已完成。
+
+关于本地记录表格：
+错误记录只需简略提及要点即可，修改人、审核人等一定要写清楚。
