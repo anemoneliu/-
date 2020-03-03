@@ -33,7 +33,7 @@ my_builder.calculate_dim_red(tSNE = True, UMAP = True)
 my_builder.calculate_cluster(RUN = True)
 #以下两个函数最后运行
 my_builder.auto_calculation()
-my_downsample.downsample()
+my_downsample.downsample() #如果需要运行该函数，必须先将原来的downsample_data文件夹删除！
 
 二、	cellAnnotation（以下情形为矩阵未改动的情形，如矩阵变动参考1.1）
 
