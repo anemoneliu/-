@@ -58,6 +58,7 @@ cluster如果是用函数生成的话会多出两列：clusteringMethod和cluste
 1.关于人的数据一般都能找到tissue，不可填为notAvailable;
 2.research topic那几个字段，即cancer，disease等已经统一检查过了，一般情况下不需要更改，不确定的请咨询；
 3.genomeBuild也是统一核查过的，一般没有错，注意不要改错了。
+4.metadata里面多出来的字段不要删掉！少的需要加上！
 
 四、	其他注意事项
 
