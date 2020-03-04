@@ -22,15 +22,13 @@ my_downsample = downsample.Downsample(starting_dir)
 
 一、	矩阵
 
-矩阵变动情形需将该文件夹cp –r 到个人目录下进行更改，不允许直接在standard_dataset里面进行更改
-
 1.1	raw counts, normalized变动，需要考虑重新生成TPM矩阵；
 
 1.2	TPM矩阵变化，所有自动生成函数需重新运行，包括：
 
 my_builder.generate_geneAnno()
 my_builder.calculate_dim_red(tSNE = True, UMAP = True)
-my_builder.calculate_cluster(RUN = True) #提供cluster信息的时候则不需要运行该行！
+my_builder.calculate_cluster(RUN = True) #注意参数RUN=True会将原cluster信息删除并更新，所以如果原文提供cluster信息的时候不要运行该行！
 #以下两个函数最后运行
 my_builder.auto_calculation()
 my_downsample.downsample() #如果需要运行该函数，必须先将原来的downsample_data文件夹删除！
