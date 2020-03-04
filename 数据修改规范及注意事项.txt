@@ -30,7 +30,7 @@ my_downsample = downsample.Downsample(starting_dir)
 
 my_builder.generate_geneAnno()
 my_builder.calculate_dim_red(tSNE = True, UMAP = True)
-my_builder.calculate_cluster(RUN = True)
+my_builder.calculate_cluster(RUN = True) #提供cluster信息的时候则不需要运行该行！
 #以下两个函数最后运行
 my_builder.auto_calculation()
 my_downsample.downsample() #如果需要运行该函数，必须先将原来的downsample_data文件夹删除！
