@@ -57,6 +57,9 @@ cluster如果是用函数生成的话会多出两列：clusteringMethod和cluste
 2.research topic那几个字段，即cancer，disease等已经统一检查过了，一般情况下不需要更改，不确定的请咨询；
 3.genomeBuild也是统一核查过的，一般没有错，注意不要改错了。
 4.metadata里面多出来的字段不要删掉！少的需要加上！
+5.增加字段：
+  metadata['correspondingFigure'] = '' 
+  # 这里填写该数据对应的文章tSNE聚类图，格式为形如"1-a"，意思为figure1的图a，没有对应的图填为notAvailable
 
 四、	其他注意事项
 
