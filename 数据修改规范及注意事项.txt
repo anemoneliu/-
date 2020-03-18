@@ -22,9 +22,9 @@ my_downsample = downsample.Downsample(starting_dir)
 
 一、	矩阵
 
-1.1	raw counts, normalized变动，需要考虑重新生成TPM矩阵；
+1.1	raw counts, normalized变动，需要考虑重新生成TPM矩阵；（注意TPM如果重新生成了，参考1.2运行自动生成函数）
 
-1.2	TPM矩阵变化，所有自动生成函数需重新运行，包括：
+1.2	TPM矩阵如果变化了，所有自动生成函数都需重新运行，包括：
 
 my_builder.generate_geneAnno()
 my_builder.calculate_dim_red(tSNE = True, UMAP = True)
